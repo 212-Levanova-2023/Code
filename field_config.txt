@@ -1,0 +1,8 @@
+Random hills = 7;
+Random stones = 7;
+Random logs = 2;
+Create field A: length = 100, width = 100, unevenness_degree = 25;
+Create hill(12, 30.5, -4.3, 1.5);
+Set cursor = (17, 12);
+Create log(90, 35, 35, 85, 12.5);
+Count field;

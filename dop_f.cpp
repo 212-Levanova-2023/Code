@@ -1,0 +1,36 @@
+#include "dop_f.h"
+bool is_extra_symbol_after_semicolon(string str) {
+    size_t pos = str.find(";");
+    if (pos != std::string::npos) {
+        string substr = str.substr(pos + 1);
+
+        if (substr.find_first_not_of(" \t\n\v\f\r") != std::string::npos) {
+            return true;
+        }
+        else return false;
+    }
+    else return false;
+}
+
+
+bool is_substr(string str, string substr) {
+    return (str.find(substr) != string::npos);
+}
+
+void printer_with_time(string message, ofstream& file)
+{
+    auto now = chrono::system_clock::now();
+    time_t end_time = chrono::system_clock::to_time_t(now);
+    file << message << ctime(&end_time);
+}
+
+double get_sqr(const double& num) {
+    return num * num;
+}
+
+bool can_double_to_int(const double& num) {
+    if (fabs(int(num) - num) < EPS) {
+        return 1;
+    }
+    else return 0;
+}

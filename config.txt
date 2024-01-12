@@ -1,0 +1,8 @@
+print date = YES;
+Field command file = "field_config.txt";
+Rover command file = "rover_config.txt";
+Log boundary file = "Boundary log.txt";
+Log control file = "Control log.txt";
+GNU file for field = "GNUplot.txt";
+GNU file for rover = "Rover.txt";
+The final GNU file = "GNU.txt";
